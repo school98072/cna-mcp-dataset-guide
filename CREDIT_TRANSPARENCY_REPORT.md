@@ -26,9 +26,11 @@
 
 ### ⚠️ 黑盒視角下的直觀恐慌：
 如果以一般消費者的「提問次數」來換算：
-$$\text{單次提問表觀成本} = \frac{180 \text{ Credits}}{3 \text{ 次問題}} = \mathbf{60 \text{ Credits / 提問}}$$
-$$\text{全月可提問次數} = \frac{700 \text{ Credits}}{60 \text{ Credits}} \approx \mathbf{11.6 \text{ 次提問}}$$
-$$\text{單次對話金錢成本} = \frac{200 \text{ 元}}{11.6 \text{ 次}} \approx \mathbf{17.2 \text{ 元台幣 / 次}}$$
+```text
+單次提問表觀成本 = 180 Credits ÷ 3 次提問 = 60 Credits / 提問
+全月可提問次數   = 700 Credits ÷ 60 Credits ≈ 11.6 次提問
+單次對話金錢成本 = 200 元 ÷ 11.6 次 ≈ 17.2 元台幣 / 次
+```
 
 > **用戶第一直覺：**「200 元台幣只能問 11 句話？平均問一句要 17 元？這難道是典型的黑盒割韭菜收費？」  
 > **真相真的是這樣嗎？我們決定打開底層網路日誌，逐行還原真相！**
@@ -74,7 +76,8 @@ AI 程式碼助理（如 Antigravity、Claude Code、Cursor）與外部對話平
 | **提問 3 (Spark)** | 1998-02-28 當日新聞檢索 | **~12 次** | 意圖改寫與多篇抓取 |
 | **總計** | **表面 3 個問題** | **約 90 次底層請求** | **總扣除 180 Credits** |
 
-$$\mathbf{\text{真實扣點費率}} = \frac{180 \text{ Credits}}{90 \text{ 次 API 請求}} = \mathbf{2 \text{ Credits / 次 API 呼叫}}$$
+> 🧮 **底層真實扣點費率計算**：  
+> **180 Credits ÷ 90 次真實 API 請求 = 2 Credits / 次 API 呼叫**
 
 > 💡 **核心結論：**  
 > 中央社 CNA MCP 的真實底層扣點機制約為 **每次 API Tool Call 扣除 2 Credits**！  
@@ -86,10 +89,8 @@ $$\mathbf{\text{真實扣點費率}} = \frac{180 \text{ Credits}}{90 \text{ 次 
 
 知道了 **1 次 API 調用 = 2 Credits** 的真相後，我們就能精確計算 200 元台幣（700 Credits）的實際購買力：
 
-* **單點 Credit 價值**：  
-  $$\text{NT\$ } 200 \div 700 \text{ Credits} = \mathbf{\text{NT\$ } 0.2857 \text{ / 點}}$$
-* **單次 API 檢索真實成本**：  
-  $$2 \text{ Credits} \times \text{NT\$ } 0.2857 = \mathbf{\text{NT\$ } 0.57 \text{ / 次}}$$
+* **單點 Credit 價值**：`NT$ 200 ÷ 700 Credits ≈ NT$ 0.2857 / 點`
+* **單次 API 檢索真實成本**：`2 Credits × NT$ 0.2857 ≈ NT$ 0.57 / 次`
 
 ### 兩種完全不同使用型態的壽命分析：
 
