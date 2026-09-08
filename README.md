@@ -218,7 +218,8 @@ claude mcp add --transport http cna-mcp https://ask.cna.com.tw/mcp/connect \
 
 > 📊 **實測個案研究**：我們運用本地 SQLite 快取技術，完整檢索並剖析了中央社 1994 至 2026 年（跨越 32 年）台積電從上市首日「票房毒藥」到破千元大關的原始報導與情緒傳導因果機制：  
 > 👉 **[點此閱讀歷史新聞分析：台積電 32 年（1994–2026）股價歷史新聞、投資者情緒與波動機制實測研究](TSMC_30Y_SENTIMENT_ANALYSIS.md)**  
-> 👉 **[點此閱讀真實股價量化回測：台積電消息面三大因果定律：真實股價量化回測與前後窗口交叉驗證報告](TSMC_CAUSAL_LAWS_BACKTEST.md)**
+> 👉 **[點此閱讀真實股價量化回測：台積電消息面三大因果定律：真實股價量化回測與前後窗口交叉驗證報告](TSMC_CAUSAL_LAWS_BACKTEST.md)**  
+> 👉 **[點此閱讀最新估值反推：台積電最新市值反推未來五年淨利潤與 Aswath Damodaran 3P 估值檢驗報告](TSMC_REVERSE_VALUATION_3P.md)**
 
 ---
 
