@@ -95,6 +95,11 @@
 
 ## 🗂️ 四、 六大子資料庫架構 (Database Architecture)
 
+![CNA MCP Database System Core Architecture Overview](assets/cna_architecture_diagram.jpg)
+
+<details>
+<summary><b>點此展開 Mermaid 代碼結構拓撲圖 (Text-based Topology)</b></summary>
+
 ```mermaid
 flowchart TD
     subgraph CNA_MCP["中央社國家級新聞與事實資料庫集群"]
@@ -125,6 +130,8 @@ flowchart TD
     T4 -.詞彙擴展與譯名消歧.-> T1
     T1 -.結構化交付.-> T6
 ```
+
+</details>
 
 ---
 
