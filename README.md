@@ -218,6 +218,26 @@ claude mcp add --transport http cna-mcp https://ask.cna.com.tw/mcp/connect \
 
 ---
 
+## 💰 九、 點數計費反推與使用成本透明度 (Credit Reverse-Engineering)
+
+> 📌 **深度專題報告**：我們發布了完整的實測反向工程報告，深入拆解「問 3 句話消耗 180 Credits」背後的底層網路封包與真實計費真相：  
+> 👉 **[點此閱讀完整報告：拒絕黑盒！中央社 CNA MCP 點數消耗速度與真實使用成本實測反推報告](CREDIT_TRANSPARENCY_REPORT.md)**
+
+### ⚡ 核心反推結論速覽
+
+* **官方訂閱規格**：個人方案每月 **新台幣 200 元**，提供 **700 Credits**。
+* **單點 Credit 成本**：$200 \div 700 \approx \mathbf{\text{NT\$ } 0.2857 \text{ / 點}}$。
+* **底層扣點真相**：
+  $$\mathbf{1 \text{ 次 API Tool Call}} \approx \mathbf{2 \text{ Credits（約 NT\$ 0.57 / 次）}}$$
+* **為什麼問 3 句話扣了 180 點？**
+  * 用戶表面只輸入了 3 個 Prompt，但 AI 智能體為完成「37 年逐年資料庫統計」，在底層自動發起了 **90 次真實 HTTP API 請求**（$90 \times 2 = 180 \text{ Credits}$）。
+* **200 元台幣能用多久？**
+  * **日常新聞問答模式（Claude / ChatGPT）**：每次提問約 2~4 Credits，可支撐 **175 ～ 350 次獨立提問**（每次約 **NT$ 0.57 ～ 1.14**，性價比極高）。
+  * **自主 Agent 遍歷研究模式（Antigravity / Cursor）**：若未設限，Agent 迴圈可能在幾分鐘內發起上百次請求，消耗整月額度。請務必開啟本地快取與最大呼叫限制！
+
+---
+
 ## 📄 開源許可 (License)
 
 本指南文檔基於 [MIT License](LICENSE) 授權開放。數據檢索之原始新聞內容版權歸屬**中央通訊社（Central News Agency, CNA）**所有。
+
